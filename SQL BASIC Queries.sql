@@ -31,5 +31,19 @@ VALUES
 
 
 
+--SELECT QUERIES
+
+--To display all data of table
+select * from Mytable; 
+
+--To  display specifc data from the table
+select Firstname, Lastname from Mytable;
+select Firstname, Age, Salary from Mytable;
+
+-- To display distinct (different) data of a column
+select DISTINCT (Lastname) from Mytable;
+
+
+
 
 
