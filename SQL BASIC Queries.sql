@@ -67,7 +67,7 @@ where Salary = (SELECT MAX(Salary) from Mytable);
 --SUM
 select SUM(Salary) as TotalSalary from Mytable;
 
---COUNT
+--COUNT(no of rows)
 select COUNT(*) as totalmembers from Mytable;
 
 --String Functions
@@ -92,6 +92,9 @@ from Mytable;
 SELECT Firstname AS "First Name", Lastname AS "Last Name"
 FROM Mytable AS R;
 
+--ORDER BY (sorts the result according to the condition we proviede)
+select * from Mytable order by Age ASC; --ASC is by default
+select * from Mytable order by Salary DESC;
 
 
 
