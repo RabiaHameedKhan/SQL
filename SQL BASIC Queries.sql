@@ -43,6 +43,56 @@ select Firstname, Age, Salary from Mytable;
 -- To display distinct (different) data of a column
 select DISTINCT (Lastname) from Mytable;
 
+--To display according to limit provided
+select TOP 3 * from Mytable;
+select TOP 2 Firstname, Age from Mytable;
+
+
+
+--SQL FUNCTIONS
+
+--Average
+select Avg(Salary) as Avg_Salary from Mytable;
+
+--Minimum
+select  MIN(Age) as youngest from Mytable;
+SELECT Firstname, Age
+FROM Mytable
+WHERE Age = (SELECT MIN(Age) FROM Mytable);
+
+--Maximum
+select Firstname, Salary from Mytable
+where Salary = (SELECT MAX(Salary) from Mytable);
+
+--SUM
+select SUM(Salary) as TotalSalary from Mytable;
+
+--COUNT
+select COUNT(*) as totalmembers from Mytable;
+
+--String Functions
+
+--UpperCase letters
+select UPPER(Firstname) as Name_In_UpperCase from Mytable;
+
+--Lowercase letters
+SELECT 
+  LOWER(Firstname) AS Firstname_In_Lowercase,
+  LOWER(Lastname) AS Lastname_In_Lowercase
+FROM Mytable;
+
+--LEN (tells the no of letters)
+select Firstname,Lastname,
+LEN(Firstname) as Firstname_length,
+LEN(Lastname) as Lastname_length
+from Mytable;
+
+
+--ALIASES (used to give table or column a temporary name)
+SELECT Firstname AS "First Name", Lastname AS "Last Name"
+FROM Mytable AS R;
+
+
 
 
 
